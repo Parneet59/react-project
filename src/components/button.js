@@ -1,0 +1,34 @@
+import React, { Component } from 'react';
+import Nav from 'react-bootstrap/Nav';
+import './button.css';
+import Button from 'react-bootstrap/Button'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import Games from './Games';
+import Teams from './Teams';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+class Button1 extends Component {
+    state = {  }
+    render() { 
+        return ( 
+            <Router>
+            <div className="d1">
+
+            
+
+            <Button className="btngrp1" variant="warning" toggle href="/teams">NBA Teams</Button>
+            <Button  className="btngrp1" variant="warning" href="/games">NBA Games</Button>
+           
+            </div>
+            <Route path="/teams" component={Teams}/>
+            <Route path="/games" component={Games}/>
+            
+            </Router>
+         );
+    }
+}
+ 
+export default Button1;
